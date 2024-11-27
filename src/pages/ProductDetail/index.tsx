@@ -128,6 +128,10 @@ export default function ProductDetail() {
       title: 'Thêm vào giỏ hàng thành công ',
       description: 'Sản phẩm đã được thêm vào giỏ hàng của bạn !'
     });
+
+    setTimeout(() => {
+      window.location.href = '/shop';
+    }, 500);
   };
 
   const handleCustomProduct = (product) => {

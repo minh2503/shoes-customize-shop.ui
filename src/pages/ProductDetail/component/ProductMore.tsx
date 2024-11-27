@@ -1,9 +1,7 @@
 import { useGetRandomShoes } from '@/queries/shoes.query';
-import { useRouter } from '@/routes/hooks';
 
 export const ProductMore = () => {
   const { data: listShoes } = useGetRandomShoes();
-  const router = useRouter();
   return (
     <div className="">
       <div>
@@ -13,7 +11,11 @@ export const ProductMore = () => {
             listShoes.length > 0 &&
             listShoes.map((product) => (
               <div className="h-1/2 w-full" key={product.id}>
-                <div onClick={() => router.push(`/product/${product.id}`)}>
+                <div
+                  onClick={() => {
+                    window.location.href = `/product/${product.id}`;
+                  }}
+                >
                   <img
                     className="h-full w-full rounded-xl object-cover duration-300 hover:scale-105"
                     src={product.shoesImagesViewModels[0].thumbnail}

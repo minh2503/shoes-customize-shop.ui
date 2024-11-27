@@ -87,7 +87,7 @@ export default function ShopPage() {
     <>
       <BasePages
         className="relative mx-auto  h-auto  w-[85%] flex-1  p-4 p-4"
-        pageHead="Cửa háng sản phẩm | G-Local"
+        pageHead="Cửa hàng sản phẩm | G-Local"
         breadcrumbs={[
           { title: 'Trang chủ', link: '/' },
           { title: 'Sản phẩm', link: '/shop' }
